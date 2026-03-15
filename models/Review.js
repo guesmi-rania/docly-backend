@@ -1,3 +1,4 @@
+cat > tabib-backend/models/Review.js << 'EOF'
 const mongoose = require('mongoose');
 
 const ReviewSchema = new mongoose.Schema({
@@ -12,3 +13,4 @@ const ReviewSchema = new mongoose.Schema({
 ReviewSchema.index({ patient: 1, appointment: 1 }, { unique: true });
 
 module.exports = mongoose.model('Review', ReviewSchema);
+EOF
