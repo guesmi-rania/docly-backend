@@ -1,4 +1,3 @@
-cat > tabib-backend/routes/reviews.js << 'EOF'
 const router = require('express').Router();
 const auth = require('../middleware/auth');
 const {
@@ -12,4 +11,3 @@ router.get('/doctor/:doctorId', getDoctorReviews);
 router.get('/can-review/:appointmentId', auth, canReview);
 
 module.exports = router;
-EOF
